@@ -1,8 +1,12 @@
 'use strict';
+import 'angular';
+import 'angular-route';
+import 'angular-mocks';
+import './view2';
 
 describe('myApp.view2 module', function() {
 
-  beforeEach(module('myApp.view2'));
+  beforeEach(angular.mock.module('myApp.view2'));
 
   describe('view2 controller', function(){
 
