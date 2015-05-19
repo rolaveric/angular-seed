@@ -6,7 +6,7 @@ System.config({
   paths: {
     'angular': 'bower_components/angular/angular.js',
     'angular-route': 'bower_components/angular-route/angular-route.js',
-    'babel': '../node_modules/babel/node_modules/babel-core/browser.js'
+    'babel': '../node_modules/babel-core/browser.js'
   },
 
   // opt in to Babel for transpiling over Traceur
