@@ -2,7 +2,7 @@
 import 'angular';
 import 'angular-route';
 import 'angular-mocks';
-import './view2';
+import 'app/view2/view2.js';
 
 describe('myApp.view2 module', function() {
 

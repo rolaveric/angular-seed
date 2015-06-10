@@ -1,7 +1,7 @@
 'use strict';
 import 'angular';
 import 'angular-mocks';
-import './version-directive';
+import 'app/components/version/version-directive.js';
 
 describe('myApp.version module', function() {
   beforeEach(angular.mock.module('myApp.version'));

@@ -12,14 +12,14 @@ module.exports = function(config){
             'app/bower_components/angular-mocks/angular-mocks.js',
             'app/*/**/*.js'
         ],
- 
+
         // Point out where the SystemJS config file is
         configFile: 'app/system.config.js',
- 
+
         // Add any additional configuration, such as mappings to modules only used in testing
         config: {
             paths: {
-                'angular-mocks': 'bower_components/angular-mocks/angular-mocks.js'
+                'angular-mocks': 'app/bower_components/angular-mocks/angular-mocks.js'
             }
         }
     },

@@ -10,11 +10,10 @@
     }
   </style>
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
-  <script src="../node_modules/es6-module-loader/dist/es6-module-loader.js"></script>
   <script src="../node_modules/systemjs/dist/system.js"></script>
   <script src="system.config.js"></script>
   <script>
-    System.import('app').then(function() {
+    System.import('app/app.js').then(function() {
       angular.bootstrap(document, ['myApp']);
     });
   </script>

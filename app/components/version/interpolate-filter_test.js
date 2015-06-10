@@ -1,7 +1,7 @@
 'use strict';
 import 'angular';
 import 'angular-mocks';
-import './interpolate-filter';
+import 'app/components/version/interpolate-filter.js';
 
 describe('myApp.version module', function() {
   beforeEach(angular.mock.module('myApp.version'));
