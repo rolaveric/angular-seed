@@ -16,11 +16,11 @@
     "karma-firefox-launcher": "^0.1.5",
     "karma-jasmine": "^0.3.5",
     "karma-junit-reporter": "^0.2.2",
-    "karma-systemjs": "^0.6.0",
+    "karma-systemjs": "^0.7.0",
     "protractor": "^2.1.0",
     "shelljs": "^0.5.1",
-    "systemjs": "^0.17.1",
-    "systemjs-builder": "^0.11.3"
+    "systemjs": "^0.18.4",
+    "systemjs-builder": "^0.12.2"
   },
   "scripts": {
     "postinstall": "bower install",
