@@ -1,45 +1,64 @@
-module.exports = function(config){
+module.exports = function(config) {
   config.set({
 
-    basePath : './',
+    basePath: './',
 
-    files : [],
+    files: [],
 
     systemjs: {
-        files: [
-            'app/bower_components/angular/angular.js',
-            'app/bower_components/angular-route/angular-route.js',
-            'app/bower_components/angular-mocks/angular-mocks.js',
-            'app/*/**/*.js'
-        ],
+      files: [
+        'app/bower_components/angular/angular.js',
+        'app/bower_components/angular-route/angular-route.js',
+        'app/bower_components/angular-mocks/angular-mocks.js',
+        'app/*/**/*.js'
+      ],
 
-        // Point out where the SystemJS config file is
-        configFile: 'app/system.config.js',
+      // Point out where the SystemJS config file is
+      configFile: 'app/system.config.js',
 
-        // Add any additional configuration, such as mappings to modules only used in testing
-        config: {
-            paths: {
-                'angular-mocks': 'app/bower_components/angular-mocks/angular-mocks.js'
-            }
+      // Add any additional configuration, such as mappings to modules only used in testing
+      config: {
+        paths: {
+          'angular-mocks': 'app/bower_components/angular-mocks/angular-mocks.js'
         }
+      }
     },
 
-    autoWatch : true,
+    autoWatch: true,
 
     frameworks: ['systemjs', 'jasmine'],
 
-    browsers : ['Chrome'],
+    browsers: ['Chrome'],
 
-    plugins : ['karma-systemjs',
-            'karma-chrome-launcher',
-            'karma-firefox-launcher',
-            'karma-jasmine',
-            'karma-junit-reporter'
-            ],
+    plugins: [
+      'karma-systemjs',
+      'karma-chrome-launcher',
+      'karma-firefox-launcher',
+      'karma-jasmine',
+      'karma-junit-reporter',
+      'karma-coverage'
+    ],
 
-    junitReporter : {
+    junitReporter: {
       outputFile: 'test_out/unit.xml',
       suite: 'unit'
+    },
+
+    reporters: ['progress', 'coverage'],
+
+    preprocessors: {
+      // source files, that you wanna generate coverage for
+      // do not include tests or libraries
+      // (these files will be instrumented by Istanbul)
+      'app/!(*_test).js': ['coverage'],
+      'app/!(bower_components)**/!(*_test).js': ['coverage']
+    },
+
+    coverageReporter: {
+      instrumenters: { isparta : require('isparta') },
+      instrumenter: {
+        '**/*.js': 'isparta'
+      }
     }
 
   });
