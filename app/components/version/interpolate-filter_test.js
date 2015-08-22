@@ -4,7 +4,7 @@ import 'angular-mocks';
 import 'app/components/version/interpolate-filter.js';
 
 describe('myApp.version module', function() {
-  beforeEach(angular.mock.module('myApp.version'));
+  beforeEach(angular.mock.module('myApp.version.interpolate-filter'));
 
   describe('interpolate filter', function() {
     beforeEach(angular.mock.module(function($provide) {

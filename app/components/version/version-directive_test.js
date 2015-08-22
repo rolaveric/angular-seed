@@ -4,7 +4,7 @@ import 'angular-mocks';
 import 'app/components/version/version-directive.js';
 
 describe('myApp.version module', function() {
-  beforeEach(angular.mock.module('myApp.version'));
+  beforeEach(angular.mock.module('myApp.version.version-directive'));
 
   describe('app-version directive', function() {
     it('should print current version', function() {

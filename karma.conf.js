@@ -3,18 +3,22 @@ module.exports = function(config) {
 
     basePath: './',
 
-    files: [],
+    files: [
+      'app/**/*_test.js'
+    ],
+
+    exclude: [
+      'app/bundle.js'
+    ],
 
     systemjs: {
-      files: [
-        'app/bower_components/angular/angular.js',
-        'app/bower_components/angular-route/angular-route.js',
-        'app/bower_components/angular-mocks/angular-mocks.js',
-        'app/*/**/*.js'
-      ],
 
       // Point out where the SystemJS config file is
       configFile: 'app/system.config.js',
+
+      serveFiles: [
+        'app/**/*.js'
+      ],
 
       // Add any additional configuration, such as mappings to modules only used in testing
       config: {
